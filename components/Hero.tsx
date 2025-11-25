@@ -1,8 +1,48 @@
-import React from 'react';
-import { ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
 import { PORTFOLIO_OWNER, OWNER_TITLE, OWNER_BIO } from '../constants';
 
+const ROLES = [
+  OWNER_TITLE,
+  "Software Engineer",
+  "Cybersecurity Specialist",
+  "React & Node.js Developer"
+];
+
 const Hero: React.FC = () => {
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+
+  useEffect(() => {
+    const handleType = () => {
+      const i = loopNum % ROLES.length;
+      const fullText = ROLES[i];
+
+      setText(isDeleting 
+        ? fullText.substring(0, text.length - 1) 
+        : fullText.substring(0, text.length + 1)
+      );
+
+      // Typing Speed Logic
+      setTypingSpeed(isDeleting ? 30 : 100);
+
+      if (!isDeleting && text === fullText) {
+        // Finished typing full phrase, pause before deleting
+        setTimeout(() => setIsDeleting(true), 2000);
+      } else if (isDeleting && text === '') {
+        // Finished deleting, move to next phrase
+        setIsDeleting(false);
+        setLoopNum(loopNum + 1);
+        setTypingSpeed(500);
+      }
+    };
+
+    const timer = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, loopNum, typingSpeed]);
+
   return (
     <section id="about" className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
       {/* Background Glow */}
@@ -22,8 +62,9 @@ const Hero: React.FC = () => {
             Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-purple-400">{PORTFOLIO_OWNER}</span>
           </h1>
           
-          <h2 className="text-2xl md:text-3xl font-medium text-slate-400 mb-8 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            {OWNER_TITLE}
+          <h2 className="text-2xl md:text-3xl font-medium text-slate-400 mb-8 h-8 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <span>{text}</span>
+            <span className="border-r-2 border-primary-500 ml-1 animate-blink">&nbsp;</span>
           </h2>
           
           <p className="text-lg text-slate-400 mb-10 leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
@@ -41,17 +82,17 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="mt-12 flex justify-center space-x-6 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors">
+            <a href="https://github.com/JasonSalon" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
               <span className="sr-only">GitHub</span>
               <Github className="h-6 w-6" />
             </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/jason-patrick-salon-114089288/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
               <span className="sr-only">LinkedIn</span>
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors">
-              <span className="sr-only">Twitter</span>
-              <Twitter className="h-6 w-6" />
+            <a href="mailto:patrickranario45@gmail.com" className="text-slate-400 hover:text-white transition-colors">
+              <span className="sr-only">Email</span>
+              <Mail className="h-6 w-6" />
             </a>
           </div>
         </div>

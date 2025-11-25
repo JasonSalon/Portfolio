@@ -1,77 +1,86 @@
 import { Project, Skill, Experience } from './types';
 
-export const PORTFOLIO_OWNER = "Jason";
-export const OWNER_TITLE = "Senior Creative Engineer";
-export const OWNER_BIO = "I craft high-performance, interactive web experiences. Specializing in React ecosystem, 3D visualization, and AI integration. I bridge the gap between design and engineering.";
+export const PORTFOLIO_OWNER = "Jason Patrick R. Salon";
+export const OWNER_TITLE = "Full Stack Web Developer";
+export const OWNER_BIO = "Full Stack Web Developer with hands-on experience building secure, scalable web applications using modern frameworks like React, Django, and Node.js. Skilled in designing clean, responsive UIs and developing robust backend systems with RESTful APIs, database integration, and cloud-based deployment. Contributed to cybersecurity platforms, e-commerce systems, and compliance software in fast-paced development environments. Known for strong problem-solving skills, adaptability, and a deep commitment to writing efficient, maintainable code that delivers real business value.";
 
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Nebula Dashboard",
-    description: "A real-time data visualization dashboard for SaaS analytics. Features customizable widgets, dark mode, and <50ms latency updates via WebSockets.",
-    tags: ["React", "TypeScript", "D3.js", "Socket.io"],
-    imageUrl: "https://picsum.photos/600/400?random=1",
+    title: "Service-Based E-Commerce Platform",
+    description: "Designed and developed a scalable e-commerce platform. Integrated secure user authentication and payment systems, improving transaction success rates by 25%. Built with ReactJS, NodeJS, and PostgreSQL.",
+    tags: ["ReactJS", "NodeJS", "PostgreSQL", "Payment Gateway"],
+    imageUrl: "https://picsum.photos/600/400?random=10",
     link: "#",
     github: "#"
   },
   {
     id: 2,
-    title: "Echo AI Chat",
-    description: "An intelligent conversational interface leveraging LLMs to assist with customer support. Includes voice-to-text and sentiment analysis.",
-    tags: ["Next.js", "Gemini API", "Tailwind", "Redis"],
-    imageUrl: "https://picsum.photos/600/400?random=2",
+    title: "All-in-One Cybersecurity Platform",
+    description: "Developed core modules for intrusion detection and vulnerability scanning. Unified separate systems into a single scalable platform, improving performance and reducing bug reports by 30%.",
+    tags: ["Django", "Python", "Cybersecurity", "Scalability"],
+    imageUrl: "https://picsum.photos/600/400?random=11",
     link: "#",
     github: "#"
   },
   {
     id: 3,
-    title: "Voxel Editor 3D",
-    description: "Browser-based 3D modeling tool. Users can create, export, and share voxel art directly in the browser using WebGL.",
-    tags: ["Three.js", "React Three Fiber", "Zustand"],
-    imageUrl: "https://picsum.photos/600/400?random=3",
+    title: "NG SIEM Threat Detection",
+    description: "Enhanced threat detection algorithms and implemented real-time event correlation features. Integrated visual dashboards for proactive incident response within the analytics team.",
+    tags: ["Python", "Analytics", "Threat Detection", "Dashboard"],
+    imageUrl: "https://picsum.photos/600/400?random=12",
     link: "#",
     github: "#"
   },
   {
     id: 4,
-    title: "Finance Flow",
-    description: "Personal finance tracking application with predictive budgeting algorithms and bank integration.",
-    tags: ["Vue.js", "Node.js", "PostgreSQL", "Chart.js"],
-    imageUrl: "https://picsum.photos/600/400?random=4",
+    title: "Compliance Software Suite",
+    description: "Contributed to privacy and security compliance tools focusing on user privacy and front-end UI development. Implemented encryption standards for user data.",
+    tags: ["UI/UX", "Security", "Encryption", "Compliance"],
+    imageUrl: "https://picsum.photos/600/400?random=13",
     link: "#"
   }
 ];
 
 export const SKILLS: Skill[] = [
   { name: "React / Next.js", level: 95, category: "Frontend", icon: "⚛️" },
-  { name: "TypeScript", level: 90, category: "Frontend", icon: "TS" },
-  { name: "Tailwind CSS", level: 95, category: "Design", icon: "🎨" },
-  { name: "Node.js", level: 80, category: "Backend", icon: "🟢" },
-  { name: "GraphQL", level: 75, category: "Backend", icon: "📡" },
-  { name: "Docker / CI/CD", level: 70, category: "Tools", icon: "🐳" },
+  { name: "Django / Python", level: 90, category: "Backend", icon: "🐍" },
+  { name: "Node.js", level: 85, category: "Backend", icon: "🟢" },
+  { name: "Tailwind CSS / Bootstrap", level: 90, category: "Frontend", icon: "🎨" },
+  { name: "PostgreSQL / MySQL", level: 85, category: "Backend", icon: "🗄️" },
+  { name: "Flutter", level: 75, category: "Frontend", icon: "📱" },
+  { name: "Docker / Git", level: 80, category: "Tools", icon: "🐳" },
+  { name: "Laravel", level: 80, category: "Backend", icon: "🏗️" },
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    role: "Senior Frontend Engineer",
-    company: "TechNova Solutions",
-    period: "2021 - Present",
-    description: "Leading a team of 6 developers to rebuild the core product platform. Improved load times by 40% and established a new component design system."
+    role: "Software Engineer",
+    company: "Antimony Technologies",
+    period: "Oct 2024 – Present",
+    description: "Designed and developed a service-based e-commerce platform using ReactJS, NodeJS, and PostgreSQL. Integrated secure user authentication and payment systems, improving transaction success rate by 25%. Collaborated closely with designers and stakeholders to ensure a seamless user experience."
   },
   {
     id: 2,
-    role: "Frontend Developer",
-    company: "Creative Pulse Agency",
-    period: "2018 - 2021",
-    description: "Developed award-winning marketing sites for Fortune 500 clients. Specialized in complex animations and interactive WebGL experiences."
+    role: "Senior Web Developer",
+    company: "CyTech International",
+    period: "June 2023 – Oct 2024",
+    description: "Developed core modules like intrusion detection and vulnerability scanning using Django and Python. Helped unify separate systems into a single scalable platform, improving performance and reducing bug reports by 30%. Coordinated with QA and research teams to ensure security and compliance standards were met."
   },
   {
     id: 3,
-    role: "Junior Web Developer",
-    company: "StartUp Inc",
-    period: "2016 - 2018",
-    description: "Collaborated on the initial MVP launch. Handled full-stack features using MERN stack."
+    role: "Web Developer / Researcher",
+    company: "CyTech International",
+    period: "Feb 2023 – June 2023",
+    description: "Enhanced threat detection algorithms and implemented real-time event correlation features. Worked with the analytics team to integrate visual dashboards for proactive incident response. Focused on secure coding practices and codebase optimization."
+  },
+  {
+    id: 4,
+    role: "Web Developer / QA",
+    company: "CyTech International",
+    period: "Dec 2022 – Feb 2023",
+    description: "Contributed to privacy and security compliance tools with a focus on testing, user privacy, and front-end UI development. Ensured regulatory adherence and implemented basic encryption standards for user data."
   }
 ];
 
@@ -86,6 +95,6 @@ Bio: ${OWNER_BIO}
 Skills: ${SKILLS.map(s => s.name).join(', ')}
 Experience: ${EXPERIENCE.map(e => `${e.role} at ${e.company} (${e.period})`).join('; ')}
 Projects: ${PROJECTS.map(p => `${p.title}: ${p.description}`).join('; ')}
-If asked about contact info, suggest using the contact form or email: jason@example.com.
+If asked about contact info, suggest using the contact form or email: patrickranario45@gmail.com.
 Do not make up facts not present in this data. If you don't know, say you don't know but can forward the query.
 `;

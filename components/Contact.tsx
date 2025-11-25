@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-white">Email</h3>
-                  <p className="text-slate-400">jason@example.com</p>
+                  <p className="text-slate-400">patrickranario45@gmail.com</p>
                 </div>
               </div>
               
@@ -32,19 +32,11 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-lg font-medium text-white">Location</h3>
-                  <p className="text-slate-400">San Francisco, CA</p>
+                  <p className="text-slate-400">Cagayan de Oro, Philippines</p>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="flex-shrink-0 bg-slate-800 p-3 rounded-lg">
-                  <Phone className="h-6 w-6 text-primary-500" />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-lg font-medium text-white">Phone</h3>
-                  <p className="text-slate-400">+1 (555) 123-4567</p>
-                </div>
-              </div>
+              {/* Removed Phone as it was not explicitly in the main header of the resume text provided, kept email as primary */}
             </div>
           </div>
 

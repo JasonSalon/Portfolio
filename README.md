@@ -8,8 +8,6 @@ This contains everything you need to run your app locally.
 
 View your app in AI Studio: https://ai.studio/apps/drive/10JKWtXjn-1Oau3f_EJkvc4pQ4HedpnD6
 
-View Website: https://jason-portfolio-935608689466.us-west1.run.app/
-
 ## Run Locally
 
 **Prerequisites:**  Node.js
