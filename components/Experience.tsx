@@ -30,9 +30,11 @@ const Experience: React.FC = () => {
                   {exp.company}
                 </div>
                 
-                <p className="text-slate-400 leading-relaxed">
-                  {exp.description}
-                </p>
+                <ul className="list-disc list-outside text-slate-400 leading-relaxed space-y-2 ml-4">
+                  {exp.description.map((bullet, idx) => (
+                    <li key={idx}>{bullet}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

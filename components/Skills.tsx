@@ -20,9 +20,13 @@ const Skills: React.FC = () => {
                   {category === 'Frontend' && '💻'}
                   {category === 'Backend' && '⚙️'}
                   {category === 'Design' && '🎨'}
-                  {category === 'Tools' && '🛠️'}
+                  {category === 'Tools & DevOps' && '🛠️'}
+                  {category === 'Database' && '🗄️'}
+                  {category === 'Mobile' && '📱'}
+                  {category === 'AI / ML' && '🧠'}
+                  {category === 'CMS' && '🌐'}
                 </span>
-                {category} Development
+                {category.includes('DevOps') || category.includes('AI / ML') || category === 'CMS' ? category : `${category} Development`}
               </h3>
               
               <div className="space-y-6">

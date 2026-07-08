@@ -13,7 +13,7 @@ export interface Project {
 export interface Skill {
   name: string;
   level: number; // 0-100
-  category: 'Frontend' | 'Backend' | 'Tools' | 'Design';
+  category: string;
   icon: string;
 }
 
@@ -29,7 +29,7 @@ export interface Experience {
   role: string;
   company: string;
   period: string;
-  description: string;
+  description: string[];
 }
 
 export interface SocialLink {
